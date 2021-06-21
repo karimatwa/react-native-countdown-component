@@ -12,6 +12,7 @@ import _ from "lodash";
 import { sprintf } from "sprintf-js";
 import { I18nManager } from "react-native";
 import { ArabicNumbers } from "react-native-arabic-numbers";
+import { WP } from "../../src/utils/design";
 
 const DEFAULT_DIGIT_STYLE = { backgroundColor: "#FAB913" };
 const DEFAULT_DIGIT_TXT_STYLE = { color: "#000" };
@@ -136,7 +137,7 @@ class CountDown extends React.Component {
       <View
         style={[
           styles.digitCont,
-          { width: size * 2.3, height: size * 2.6 },
+          { width: size * 2.3, height: size * 2.3 },
           digitStyle,
         ]}
       >
@@ -266,8 +267,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   digitCont: {
-    borderRadius: 5,
-    marginHorizontal: 2,
+    borderRadius: WP(50),
     alignItems: "center",
     justifyContent: "center",
   },
